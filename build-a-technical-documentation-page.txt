@@ -1,0 +1,146 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang:en>
+  <head>
+        <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python Pandas library documentation page</title>
+  </head>
+  <body>
+      <nav id="navbar">
+      <header id="main_header">Pandas Documentation</header>
+        <ul>
+        <li><a class="nav-link" href="#Introduction_to_Pandas">Introduction to Pandas</a></li>
+        <li><a class="nav-link" href="#Importing">Importing</a></li>
+        <li><a class="nav-link" href="#Object_Creation">Object Creation</a></li>
+        <li><a class="nav-link" href="#Viewing_Data">Viewing Data</a></li>
+        <li><a class="nav-link" href="#Selecting">Selecting</a></li>
+        <li><a class="nav-link" href="#Stats">Stats</a></li>
+        <li><a class="nav-link" href="#References">References</a></li>
+        </ul>
+        </nav>
+      <main id="main-doc">
+      <section class="main-section" id="Introduction_to_Pandas">
+        <header>Introduction to Pandas</header>
+        <h3>What is pandas?</h3>
+          <p>Pandas is a fast, powerful, flexible and easy to use open source data analysis and manipulation tool,
+          built on top of the Python programming language.</p>
+        <h3>What's the purpose of using Pandas?</h3>
+          <p>When working with tabular data, such as data stored in spreadsheets or databases, pandas is the right tool for you. 
+            Pandas will help you to explore, clean, and process your data. In pandas, a data table is called a <i>DataFrame</i>.</p>
+        <h3>What you should already know</h3>
+          <p>This guide assumes that you have the following:
+            <li>a general knowledge of the World Wide Web</li>
+            <li>a general knowledge about using an Integrated Development Environment</li>
+            <li>a basic knowledge of Python</li></p>
+        <h3>How do I read and write tabular data?</h3>
+          <p>Pandas supports the integration with many file formats or data sources out of the box (csv, excel, sql, json, parquet,…). 
+            Importing data from each of these data sources is provided by function with the following prefix :<code>read_*</code> 
+            Similarly, the <code>to_*</code> methods are used to store data.</p></section>
+        <section class="main-section" id="Importing">
+        <header>Importing</header>
+          <p>When using libraries in Python, you should first <i>import</i> the library in order to use it. Customarily, we import as follows: <code>import pandas as pd</code></p>
+          <p>When using Pandas' objects of functions you will need to refer to the library thus the usage of the alias "pd". Aliasing is optional, but is highly advised to do so for future usages with pandas' objects/functions and it is also important to use the alias "pd" for readers.</p></section>
+     <section class="main-section" id="Object_Creation">
+        <header>Object Creation</header>
+        <p>Creating a Series by passing a list of values: <code>pd.Series(#insert here the values)</code></p>
+        <p>Creating a DataFrame by passing tabular values, an index and columns' names: <code>pd.DataFrame(#data frame values, #index values, #column names)</code> </p></section>
+      <section class="main-section" id="Viewing_Data">
+        <header>Viewing Data</header>
+        <p>To see the top and bottom values of a DataFrame, use <code>pd.DataFrame.head()</code> and <code>pd.DataFrame.tail()</code> respectively.</p>
+        <p>We can also use <code>pd.DataFrame.index</code> to see the index and <code>pd.DataFrame.columns</code> to see the columns</p></section>
+      <section class="main-section" id="Selecting">
+        <header>Selecting</header>
+        <p>There are many ways to selecting a specfific datum or a range of data, or to select a column or a range of columns.</p>
+        <p><code>pd.DataFrame["column name"]</code> to get a specific a column.</p>
+        <p>Or by label selection with <code>pd.Dataframe.loc[row name, column name]</code></p>
+        <p>Or even by position with <code>pd.Dataframe.iloc[row number, column number]</code></p>
+        <p>You can also select a range of columns or rows with the colon sign, e.g.: <code>pd.DataFrame.iloc[0:3, 0:5]</code></p>
+        <p id="comment">The code above will select the first three rows and the first four columns of the DataFrame.</p>
+      </section>
+      <section class="main-section" id="Stats">
+        <header>Stats</header>
+        <p>To get a summary of your data you can use the following function :</p>
+        <code>pd.DataFrame.describe()</code> 
+        <p>You can also get statistics by applying pandas' functions such as :</p><code><li>pd.DataFrame.mean()</li> <br> <li>pd.DataFrame.median</li> <br> <li>pd.DataFrame.std()</li></code>
+      </section>
+      <section class="main-section" id="References">
+        <header>References</header>
+          <li>All documentation in this page is taken from <a href="https://pandas.pydata.org/docs/index.html" target="_blank">Pandas' website</a>.</li></section>
+    </main>
+  </body>
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+html, body {
+    min-width: 50px;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    font-family: Arial;
+    line-height: 1.25;
+}
+
+code {
+    display: block;
+    background-color: #f7f7f1; 
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: max-content;
+}
+header {
+    color:black;
+    font-size:1.6em;
+    margin: 5px;
+}
+
+#comment {
+   margin:5px; 
+   padding-left: 5px;
+   font-style: italic;
+}
+
+#main_header {
+    text-align: center;
+    font-size:1.7em;
+    }
+
+body {
+    position: absolute;
+    text-align: block;
+    margin-left: 310px;
+    border-left: 2px solid #696969;
+    padding-left: 10px;
+    padding-bottom:15px;
+}
+
+#navbar {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width:100%;
+    max-width:300px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    text-align: -webkit-match-parent;
+}
+
+@media screen and (max-width: 600px) {
+  div.example {
+    font-size: 30px;
+  }
+}
+
+
+** end of undefined **
+
